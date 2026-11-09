@@ -2,6 +2,8 @@
 
 Real-time Telegram alerts for large **BTC, ETH and SOL** liquidations on Hyperliquid.
 
+> Just want to look? The free [Hyperliquid whale tracker](https://onchainsonar.com/hyperliquid-whale-tracker) shows live positions near liquidation and liquidation clusters for every perp, plus [liquidation maps by coin](https://onchainsonar.com/hyperliquid/).
+
 ```
 🔴 LONG LIQUIDATED · ETH
 Size: $2.42M (760 ETH) @ 3,182.40
@@ -66,10 +68,13 @@ python -m hl_liq --replay tests/fixtures/sample.jsonl --console
 
 This repo sends one alert per liquidation. [OnchainSonar](https://onchainsonar.com) Pro adds:
 
-- **Clustering** — a cascade becomes one alert with the total, not 40 messages
-- **Whale near-liquidation** — positions close to their liq price, *before* it happens
-- All coins, per-coin and adaptive thresholds, OI & funding context, labeled wallets
-- Nothing to host — runs 24/7
+- **Liquidation clusters**: zones where several wallets would be liquidated together, with the wallet list
+- **Whales near liquidation**: positions close to their liq price, *before* it happens
+- All coins, personal filters per feed (size, side, distance, leverage, coins), one-tap mute
+- More feeds in the same bot: open interest, exchange deposits, Gnosis Safe and team wallets
+- Nothing to host, runs 24/7, [5-day free trial](https://t.me/onchainsonar_bot?start=trial)
+
+Learn to read the data: [how to trade liquidation clusters](https://onchainsonar.com/guides/how-to-trade-liquidation-clusters) · [whales near liquidation](https://onchainsonar.com/guides/hyperliquid-whales-near-liquidation)
 
 ## Tests
 
